@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042886682644",
+    "project_id": "tesetire-c8f5a",
+    "storage_bucket": "tesetire-c8f5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042886682644:android:88edd744c03bf0b0c1df01",
+        "android_client_info": {
+          "package_name": "naclai.ballon.wellin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042886682644-e4mgi5ig8305t5ngkpq1jkj1kpt4inur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_ok6rxR5_Jf9wtKHXL7yXcS1pXLjtTjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042886682644-e4mgi5ig8305t5ngkpq1jkj1kpt4inur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
