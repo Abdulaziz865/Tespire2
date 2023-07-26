@@ -4,9 +4,8 @@ import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
+import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -17,11 +16,7 @@ import naclai.ballon.wellin.R
 import naclai.ballon.wellin.databinding.FragmentHomeBinding
 import naclai.ballon.wellin.white.ui.adapters.RecyclerAdapter
 import naclai.ballon.wellin.white.utils.OnItemClickListener
-import naclai.ballon.wellin.white.utils.cheakDialog
-import naclai.ballon.wellin.white.utils.dataE
 import naclai.ballon.wellin.white.utils.list
-import naclai.ballon.wellin.white.utils.timeE
-import naclai.ballon.wellin.white.utils.txtNotifications
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home), OnItemClickListener {
@@ -79,44 +74,14 @@ class HomeFragment : Fragment(R.layout.fragment_home), OnItemClickListener {
             findNavController().navigate(R.id.historyFragment)
             bottomNavigationView.visibility = View.GONE
         }
-        binding.dialog.setOnClickListener {
-            showCustomDialog()
+        binding.txtP1.setOnClickListener {
+            showDialog(binding.txtP1)
         }
-    }
-
-    private fun showCustomDialog() {
-        if (cheakDialog) {
-            val dialogView = layoutInflater.inflate(R.layout.custom_dialog2, null)
-
-            val txtNotification = dialogView.findViewById<TextView>(R.id.txt_notifications)
-            val data = dialogView.findViewById<TextView>(R.id.data)
-            val close = dialogView.findViewById<ImageView>(R.id.close)
-            val time = dialogView.findViewById<TextView>(R.id.time)
-
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-                .setView(dialogView)
-
-            val customDialog = dialogBuilder.create()
-            customDialog.show()
-
-            txtNotification.text = txtNotifications
-            data.text = dataE
-            time.text = timeE
-            close.setOnClickListener {
-                customDialog.dismiss()
-            }
-        } else {
-            val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
-            val close = dialogView.findViewById<ImageView>(R.id.close)
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-                .setView(dialogView)
-
-            val customDialog = dialogBuilder.create()
-            customDialog.show()
-
-            close.setOnClickListener {
-                customDialog.dismiss()
-            }
+        binding.txtP2.setOnClickListener {
+            showDialog(binding.txtP2)
+        }
+        binding.txtP3.setOnClickListener {
+            showDialog(binding.txtP3)
         }
     }
 
@@ -140,5 +105,25 @@ class HomeFragment : Fragment(R.layout.fragment_home), OnItemClickListener {
         )
         adapter.notifyDataSetChanged()
         bottomNavigationView.visibility = View.GONE
+    }
+
+    private fun showDialog(et: TextView) {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+        builder.setTitle("Какое значение хотите задать?")
+        val inputField = EditText(requireContext())
+        builder.setView(inputField)
+
+        builder.setPositiveButton("OK") { dialog, which ->
+            val userInput: String = inputField.text.toString()
+            if (userInput.isNotBlank()) {
+                et.text = userInput
+                dialog.dismiss()
+            }
+        }
+        builder.setNegativeButton("Отмена") { dialog, which ->
+            dialog.cancel()
+        }
+
+        builder.show()
     }
 }

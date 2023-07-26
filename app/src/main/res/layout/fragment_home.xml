@@ -36,17 +36,6 @@
             app:layout_constraintTop_toTopOf="@id/top_header" />
 
         <ImageView
-            android:id="@+id/dialog"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="20dp"
-            android:elevation="2dp"
-            android:src="@drawable/bell"
-            app:layout_constraintBottom_toBottomOf="@id/top_header"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
             android:id="@+id/down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,16 +154,6 @@
             app:layout_constraintStart_toStartOf="@id/stata"
             app:layout_constraintTop_toTopOf="@id/stata" />
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="27dp"
-            android:background="@drawable/dollars"
-            android:elevation="2dp"
-            app:layout_constraintBottom_toBottomOf="@id/progressBar"
-            app:layout_constraintEnd_toEndOf="@id/progressBar"
-            app:layout_constraintStart_toStartOf="@id/progressBar"
-            app:layout_constraintTop_toTopOf="@id/progressBar" />
-
         <TextView
             android:id="@+id/txt_remainder"
             android:layout_width="wrap_content"
@@ -226,7 +205,7 @@
             android:layout_marginTop="5dp"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="$487"
+            android:text="487"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/txt_saved"
@@ -254,7 +233,7 @@
             android:layout_marginTop="5dp"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="$12487"
+            android:text="12487"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/txt_goal"
@@ -280,7 +259,7 @@
             android:layout_marginTop="20dp"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="6130 $"
+            android:text="6130"
             android:textColor="#92D8FF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@id/progressBar_1"
@@ -323,7 +302,7 @@
             android:layout_marginTop="10dp"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="2130 $"
+            android:text="2130"
             android:textColor="#E6C7FF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@id/progressBar_2"
@@ -365,7 +344,7 @@
             android:layout_marginTop="10dp"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="980  $"
+            android:text="980"
             android:textColor="#A6EA37"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@id/progressBar_3"

@@ -22,7 +22,7 @@ class RecyclerAdapter(
             if (model!!.valuable) {
                 if (model.many2 < 0) {
                     sum2.text = "model.many2"
-                    txtDollars.text = "${model.many2} $"
+                    txtDollars.text = "${model.many2}"
                     txtDollars.setTextColor(Color.parseColor("#FF9696"))
                     txtData.text = model.date2
                     txtCategory.text = model.type2
@@ -31,7 +31,7 @@ class RecyclerAdapter(
                     time2.text = model.time2
                     comment2.text = model.comment2
                 } else {
-                    txtDollars.text = "+${model.many2} $"
+                    txtDollars.text = "+${model.many2}"
                     type2.text = model.type2
                     data2.text = model.date2
                     txtData.text = model.date2
@@ -41,14 +41,14 @@ class RecyclerAdapter(
                 }
             } else {
                 if (model.many < 0) {
-                    txtDollars.text = "${model.many} $"
+                    txtDollars.text = "${model.many}"
                     txtDollars.setTextColor(Color.parseColor("#FF9696"))
                     txtCategory.text = model.type
                     txtData.text = model.date
                     time.text = model.time
                     comment.text = model.comment
                 } else {
-                    txtDollars.text = "+${model.many} $"
+                    txtDollars.text = "+${model.many}"
                     txtCategory.text = model.type
                     txtData.text = model.date
                     time.text = model.time

@@ -41,17 +41,6 @@
         app:layout_constraintEnd_toEndOf="@id/top_header"
         app:layout_constraintStart_toStartOf="@id/top_header" />
 
-    <ImageView
-        android:id="@+id/dialog"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:elevation="2dp"
-        android:src="@drawable/bell"
-        app:layout_constraintBottom_toBottomOf="@id/top_header"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/txt_change_data"
         android:layout_width="wrap_content"
@@ -162,8 +151,6 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/eight_radius"
                 android:backgroundTint="#B9CAD4"
-                android:drawableStart="@drawable/dollar"
-                android:drawablePadding="10dp"
                 android:fontFamily="@font/montserrat"
                 android:hint="100"
                 android:inputType="numberSigned"
@@ -376,8 +363,6 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/eight_radius"
                 android:backgroundTint="#B9CAD4"
-                android:drawableStart="@drawable/dollar"
-                android:drawablePadding="10dp"
                 android:fontFamily="@font/montserrat"
                 android:hint="100"
                 android:inputType="numberSigned"

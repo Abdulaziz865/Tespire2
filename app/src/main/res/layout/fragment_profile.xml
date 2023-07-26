@@ -30,17 +30,6 @@
         app:layout_constraintEnd_toEndOf="@id/top_header"
         app:layout_constraintStart_toStartOf="@id/top_header" />
 
-    <ImageView
-        android:id="@+id/dialog"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:elevation="2dp"
-        android:src="@drawable/bell"
-        app:layout_constraintBottom_toBottomOf="@id/top_header"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,18 +37,6 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/top_header">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="#6D7E88"
-            android:fontFamily="@font/montserrat_alternates_medium"
-            android:gravity="start|center"
-            android:text="Изменить язык"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:cornerRadius="8dp" />
 
         <Button
             android:layout_width="match_parent"
@@ -80,6 +57,7 @@
             android:fontFamily="@font/montserrat_alternates_medium"
             android:gravity="start|center"
             android:text="Очистить данные"
+            android:id="@+id/btn_clear"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"

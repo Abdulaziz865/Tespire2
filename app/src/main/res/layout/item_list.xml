@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="+184 $"
+            android:text="+184"
             android:textColor="#C9FF9F"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="parent"

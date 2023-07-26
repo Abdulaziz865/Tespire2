@@ -87,9 +87,6 @@ class ChangeFragment : Fragment(R.layout.fragment_change) {
     }
 
     private fun setupListener() {
-        binding.dialog.setOnClickListener {
-            showCustomDialog()
-        }
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.homeFragment)
         }
@@ -130,42 +127,6 @@ class ChangeFragment : Fragment(R.layout.fragment_change) {
                     position = "1"
                 )
             )
-        }
-    }
-
-    private fun showCustomDialog() {
-        if (cheakDialog) {
-            val dialogView = layoutInflater.inflate(R.layout.custom_dialog2, null)
-
-            val txtNotification = dialogView.findViewById<TextView>(R.id.txt_notifications)
-            val data = dialogView.findViewById<TextView>(R.id.data)
-            val close = dialogView.findViewById<ImageView>(R.id.close)
-            val time = dialogView.findViewById<TextView>(R.id.time)
-
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-                .setView(dialogView)
-
-            val customDialog = dialogBuilder.create()
-            customDialog.show()
-
-            txtNotification.text = txtNotifications
-            data.text = dataE
-            time.text = timeE
-            close.setOnClickListener {
-                customDialog.dismiss()
-            }
-        } else {
-            val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
-            val close = dialogView.findViewById<ImageView>(R.id.close)
-            val dialogBuilder = AlertDialog.Builder(requireContext())
-                .setView(dialogView)
-
-            val customDialog = dialogBuilder.create()
-            customDialog.show()
-
-            close.setOnClickListener {
-                customDialog.dismiss()
-            }
         }
     }
 }
