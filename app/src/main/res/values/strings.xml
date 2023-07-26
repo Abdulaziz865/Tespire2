@@ -2,4 +2,13 @@
     <string name="app_name">Tespire</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="spinner_prompt">Другое</string>
+    <string-array name="spinner_values">
+        <item>Другое</item>
+        <item>Зарплата</item>
+        <item>Возврат</item>
+        <item>Прибыль</item>
+        <item>Перевод</item>
+    </string-array>
 </resources>

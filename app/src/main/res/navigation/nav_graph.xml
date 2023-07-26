@@ -9,19 +9,119 @@
         android:id="@+id/homeFragment"
         android:name="naclai.ballon.wellin.white.ui.fragments.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="summa"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="summa2"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="position"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homeFragment_to_changeFragment"
+            app:destination="@id/changeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/addFragment"
         android:name="naclai.ballon.wellin.white.ui.fragments.item.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/changeFragment"
         android:name="naclai.ballon.wellin.white.ui.fragments.item.ChangeFragment"
         android:label="fragment_change"
-        tools:layout="@layout/fragment_change" />
+        tools:layout="@layout/fragment_change">
+        <argument
+            android:name="summa"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="summa2"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_changeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -40,4 +140,58 @@
         android:name="naclai.ballon.wellin.white.ui.fragments.home.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="naclai.ballon.wellin.white.ui.fragments.item.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history">
+        <argument
+            android:name="summa"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="summa2"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="data2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="type2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="time2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="comment2"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_historyFragment_to_changeFragment"
+            app:destination="@id/changeFragment" />
+    </fragment>
 </navigation>

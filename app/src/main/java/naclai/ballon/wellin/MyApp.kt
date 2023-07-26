@@ -3,7 +3,7 @@ package naclai.ballon.wellin
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 import naclai.ballon.wellin.other.OneSignalInitialization
-import vaoolo.savi.olorom.white.utils.PreferenceHelper
+import naclai.ballon.wellin.white.utils.PreferenceHelper
 import javax.inject.Inject
 
 

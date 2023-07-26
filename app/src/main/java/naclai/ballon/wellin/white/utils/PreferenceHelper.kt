@@ -1,4 +1,4 @@
-package vaoolo.savi.olorom.white.utils
+package naclai.ballon.wellin.white.utils
 
 import android.content.Context
 import android.content.SharedPreferences

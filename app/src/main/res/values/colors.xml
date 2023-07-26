@@ -9,4 +9,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="color_app">#526068</color>
     <color name="color_button">#0B1732</color>
+    <color name="orange">#FFCA43</color>
+    <color name="selected_color">#66A5E7</color>
+    <color name="unselected_color">#BFCCD3</color>
 </resources>

@@ -1,6 +1,7 @@
 package naclai.ballon.wellin.white.ui.activity
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -8,7 +9,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import naclai.ballon.wellin.R
 import naclai.ballon.wellin.databinding.ActivityWhiteBinding
-import vaoolo.savi.olorom.white.utils.PreferenceHelper
+import naclai.ballon.wellin.white.utils.PreferenceHelper
 
 @AndroidEntryPoint
 class WhiteActivity : AppCompatActivity(R.layout.activity_white) {
@@ -18,8 +19,8 @@ class WhiteActivity : AppCompatActivity(R.layout.activity_white) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setupNavigation()
+        initialize()
     }
 
     private fun setupNavigation() {
@@ -31,10 +32,29 @@ class WhiteActivity : AppCompatActivity(R.layout.activity_white) {
             true -> {
                 controllerNav.navigate(R.id.homeFragment)
                 controllerNav.popBackStack()
+                binding.bottomNavigation.visibility = View.GONE
             }
+
             else -> {
                 controllerNav.navigate(R.id.onBoardFragment)
+                binding.bottomNavigation.visibility = View.GONE
             }
+        }
+    }
+
+    private fun initialize() {
+        binding.bottomNavigation.setOnItemSelectedListener {
+            it.itemId
+            when (it.itemId) {
+                R.id.home -> {
+                    controllerNav.navigate(R.id.homeFragment)
+                }
+
+                R.id.profile -> {
+                    controllerNav.navigate(R.id.profileFragment)
+                }
+            }
+            true
         }
     }
 }
